@@ -38,14 +38,14 @@ client.on('message', async message => {
         connection.disconnect();
     }
     
-    if(command === "playallstar" && in_chan === 1)
+    if(command === "playExampleSong" && in_chan === 1)
     {
         //const co = connection;
-        const dispatcher = connection.play('smash-mouth-all-star.mp3');
+        const dispatcher = connection.play('song_example.mp3');
         dispatcher.setVolume(0.25);
         
         dispatcher.on('start', () => {
-            message.reply("Now playing : All Star - Smash Mouth");
+            message.reply("Now playing : Example Song");
         });
         
         dispatcher.on('error', () => {
@@ -84,7 +84,7 @@ client.on('message', async message => {
         }
         
         dispatcher.on('start', () => {
-            message.reply("Now playing : ce que tu as choisi enculé");
+            message.reply("Lien choisi en train d'être joué");
         });
         
         dispatcher.on('error', () => {
